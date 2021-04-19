@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">FCM</string>
     <string name="msg_token_fmt">success</string>
+    <string name="default_notification_channel_id">sooyeol</string>
+    <string name="fcm_message">안녕하세요 테스트 메세지 입니다.</string>
 </resources>
