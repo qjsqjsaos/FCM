@@ -16,8 +16,23 @@ import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
+    /** 장단점
+     * 메세지를 보내면 20초 정도 후에 알람이 도착한다
+     * */
 
-    //메세지를 수신할 때 호출된다.(메세지를 받을때) remoteMessage는ㄴ 수신한 메세지이다.
+    /** FireBase Cloud Messaging(FCM)*/
+
+    /** 알아야 할 사실
+     * 푸시 알림으로 보낼 수 있는 메세지는 2가지 유형이 있는데,
+     *
+     * 하나는 Notification이고, 하나는 Data이다.
+     * 전자는 앱이 실행중(포그라운드)일 때만 푸시 알림이 오고,
+     * 후자는 실행중이거나 백그라운드(앱이 실행중이지 않을때) 알림이 온다.
+     * 보통은 Data를 쓰지 않을 이유가 없기 때문에 특별한 상황이 아닌 이상 Data를 사용하자.
+     * */
+
+
+    //메세지를 수신할 때 호출된다.(메세지를 받을때) remoteMessage는 수신한 메세지이다.
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
 
         Log.d(TAG, "From: ${remoteMessage.from}")
