@@ -51,7 +51,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             }
         }
 
-        //메세지에 알림 페이로가 포함되어 있는지 확인한다.
+        //메세지에 알림 페이로드가 포함되어 있는지 확인한다.
         remoteMessage.notification?.let {
             Log.d(TAG, "Message Notification Body: ${it.body}")
         }
